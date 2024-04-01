@@ -1,6 +1,6 @@
 import { Injector } from 'didi'
-import CoreModule from './YFGis3d/Core'
-import Module from './YFGis3d/Module'
+import CoreModule from './GisMap3d/Core'
+import Module from './GisMap3d/Module'
 
 function bootstrap(bootstrapModules) {
   const modules = []
