@@ -8,14 +8,14 @@ import dts from 'vite-plugin-dts'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import dynamicImportVars from '@rollup/plugin-dynamic-import-vars'
 
-const name = 'gis-web-ui' // 标题
+const name = 'gis-components' // 标题
 
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'packages/components/index.js'),
-      name: 'GisWebUi',
+      name: 'GisComponents',
       formats: ['es', 'umd', 'cjs'],
       fileName: (format) => `${name}.${format}.js`
     },
@@ -86,14 +86,14 @@ export default defineConfig({
     }
   },
   server: {
-    proxy: {
-      '/api': {
-        target: `http://www.crlkcloud.com/prod-api`,
-        // 允许跨域
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
-      }
-    }
+    // proxy: {
+    //   '/api': {
+    //     target: `http://www.crlkcloud.com/prod-api`,
+    //     // 允许跨域
+    //     changeOrigin: true,
+    //     rewrite: (path) => path.replace(/^\/api/, '')
+    //   }
+    // }
   },
   define: {
     ATV: JSON.stringify(process.env.npm_package_version),

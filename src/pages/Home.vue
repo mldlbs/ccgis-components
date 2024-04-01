@@ -1,17 +1,5 @@
 <template>
   <div>
-    <!-- <gaf-map-draggable title="" :visible="true" style="width: 405px">
-      <gis-feature v-if="true" />
-      <gis-heatmap v-if="false" />
-      <gis-pipe-burst v-if="false" />
-      <gis-best-path v-if="false" />
-      <gis-query v-if="false" />
-      <gis-fly-to v-if="false" />
-      <gis-projection-image v-if="false" />
-      <gis-gradient v-if="false" />
-    </gaf-map-draggable> -->
-    <!-- <GafMapBestPathAnalysis /> -->
-    <!-- <gaf-map-buffer-analysis /> -->
     <gis-dialog-list ref="GisDialogList" class="" />
   </div>
 </template>
@@ -29,7 +17,7 @@ export default {
   beforeMount() {},
   beforeCreate() {},
   mounted() {
-    initPanel()
+    initPanel.apply(this)
   },
   methods: {}
 }

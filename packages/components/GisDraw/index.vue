@@ -10,8 +10,6 @@
 let viewer
 let drawFeature
 import { YFGis } from '../../common'
-// import YFGis from '../../../dist/YFGis'
-// import { drawAction, clearAction } from './GisListAction'
 export default {
   name: 'GisDraw',
   mounted() {

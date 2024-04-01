@@ -3,14 +3,17 @@ import CoreModule from './YFGis3d/Core'
 import Module from './YFGis3d/Module'
 
 function bootstrap(bootstrapModules) {
-  var modules = []
-  var components = []
+  const modules = []
+  const components = []
+
   function hasModule(m) {
     return modules.indexOf(m) >= 0
   }
+
   function addModule(m) {
     modules.push(m)
   }
+
   function visit(m) {
     if (hasModule(m)) {
       return
@@ -24,8 +27,10 @@ function bootstrap(bootstrapModules) {
       components.push(c)
     })
   }
+  // 注入模块
   bootstrapModules.forEach(visit)
-  var injector = new Injector(modules)
+
+  const injector = new Injector(modules)
   components.forEach(function(c) {
     try {
       // eagerly resolve component (fn or string)
@@ -41,10 +46,10 @@ function bootstrap(bootstrapModules) {
 
 export function createInjector(options) {
   options = options || {}
-  var configModule = {
+  const configModule = {
     'config': ['value', options]
   }
-  var modules = [configModule, CoreModule, Module].concat(options.modules || [])
+  const modules = [configModule, CoreModule, Module].concat(options.modules || [])
   return bootstrap(modules)
 }
 

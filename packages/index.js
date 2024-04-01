@@ -2,9 +2,6 @@
 /**
  * CIM接口开发
  */
-import GisDialog from './components/GisDialog'
-import GisDialogList from './components/GisDialogList'
-import GisSvgIcon from './components/GisSvgIcon'
 import GisDraw from './components/GisDraw/index.vue'
 import GisContourLine from './components/GisContourLine/index.vue'
 import GisGradient from './components/GisGradient/index.vue'
@@ -17,9 +14,7 @@ import GisQuery from './components/GisQuery/index.vue'
 import GisFlyTo from './components/GisFlyTo/index.vue'
 import GisTest from './components/GisTest/index.vue'
 
-import { Event } from './utils/bus'
-
-const components = [GisTest, GisSvgIcon, GisDialogList, GisDraw, GisContourLine, GisGradient, GisProjectionImage, GisFeature, GisHeatmap, GisPipeBurst, GisBestPath, GisQuery, GisFlyTo]
+const components = [GisTest, GisDraw, GisContourLine, GisGradient, GisProjectionImage, GisFeature, GisHeatmap, GisPipeBurst, GisBestPath, GisQuery, GisFlyTo]
 
 function install(Vue, options) {
   components.forEach(component => {
@@ -27,4 +22,4 @@ function install(Vue, options) {
   })
 }
 
-export { install, Event, GisDialog, GisSvgIcon, GisDialogList, GisDraw, GisContourLine, GisGradient, GisProjectionImage, GisFeature, GisHeatmap, GisPipeBurst, GisBestPath, GisQuery, GisFlyTo }
+export { install, GisDraw, GisContourLine, GisGradient, GisProjectionImage, GisFeature, GisHeatmap, GisPipeBurst, GisBestPath, GisQuery, GisFlyTo }

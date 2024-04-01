@@ -7,12 +7,16 @@ import store from './store'
 import '@/assets/styles/ccgis.scss'
 import '@/assets/icons' // icon
 
-import * as YFGis from '@gis'
+import 'gis-web-ui/dist/style.css'
+import { GisWebUi } from 'gis-web-ui'
+import * as DevComponents from '@gis'
+
+Vue.use(GisWebUi)
+Vue.use(DevComponents)
+
 Vue.config.productionTip = false
-Vue.prototype.$bus = new Vue()
 
 Vue.use(VueRouter)
-Vue.use(YFGis) // packages/components
 
 function render(props = {}) {
   // 在 render 中创建 VueRouter，可以保证在卸载微应用时，移除 location 事件监听，防止事件污染

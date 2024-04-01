@@ -12,6 +12,7 @@
     "@rollup/plugin-dynamic-import-vars": "^2.1.2",
     "core-js": "^3.20.3",
     "didi": "^10.2.0",
+    "gis-web-ui": "^1.0.31",
     "html2canvas": "^1.4.1",
     "js-signals": "^1.0.0",
     "monaco-editor": "^0.31.1",

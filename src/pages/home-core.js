@@ -1,4 +1,3 @@
-import { GisDialog } from '@gis'
 const initPanel = function() {
   const panelData = [
     {
@@ -7,11 +6,11 @@ const initPanel = function() {
       show: true,
       data: {},
       conf: {
-        type: 'tp2'
+        type: 'tp1'
       },
       style: {
-        width: 400,
-        height: 50,
+        width: 800,
+        height: 350,
         top: 0,
         left: 0,
         margin: '0px',
@@ -68,7 +67,7 @@ const initPanel = function() {
       }
     }
   ]
-  GisDialog.createFromJson(panelData)
+  this.$Panel.createPanel(panelData)
 }
 
 export { initPanel }
