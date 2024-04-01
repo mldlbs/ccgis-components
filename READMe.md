@@ -1,13 +1,7 @@
-# actions
+# ccgis-components
 
-> TODO: 应用通信
+MyProject是一个用于处理文件操作的JavaScript库。它提供了丰富的文件操作功能，如删除、创建、读取和写入文件。
 
-## Usage
-```
-  在所需通信组件中引入actions（shared/actions）
-  onGlobalStateChange: 观察者函数响应state变化
-  setGlobalState：修改state
+## 安装
 
-```
-
-#
+使用npm安装：
